@@ -51,6 +51,15 @@ namespace CourseApplication
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+                endpoints.MapControllerRoute(
+                    name: "student",
+                    pattern: "{controller=Student}/{action=AppList}/{id?}");
+
+                /*endpoints.MapControllerRoute(
+                    name: "applist",
+                    pattern: "/applist",
+                    defaults: new { controller = "Student", action = "Index" });*/
             });
         }
     }

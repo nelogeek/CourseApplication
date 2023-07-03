@@ -8,6 +8,8 @@
     string userName = currentIdentity?.Name ?? "Неизвестно";
 }
 
+@model List<Student>
+
 
 
 <div class="container-fluid">
@@ -39,15 +41,16 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @*@foreach (var student in Model)
+                    @foreach (var student in Model)
                     {
                         <tr>
                             <td>@student.Id</td>
-                            <td>@student.FirstName @student.LastName</td>
+                            <td>@student.FirstName</td>
+                            <td>@student.LastName</td>
                             <td>@student.Age</td>
                             <td>@student.Email</td>
                         </tr>
-                    }*@
+                    }
                 </tbody>
             </table>
         </div>
